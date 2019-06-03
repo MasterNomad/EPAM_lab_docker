@@ -1,15 +1,15 @@
 version: '3'
 services:
   app:
-    build: docker-app
+    image: masternomad/docker-demo:java
     deploy:
       replicas: 3
     ports:
       - "50:8080"
-    volumes:
-      - d:/docker/volumes/log:/log
-    links:
-      - postgres
+#    volumes:
+#      - d:/docker/volumes/log:/log
+#    links:
+#      - postgres
 
   postgres:
     image: postgres
